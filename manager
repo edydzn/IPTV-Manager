@@ -1,0 +1,71 @@
+import sys
+import os
+from PyQt6.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton, QFileDialog, QLineEdit, QTextEdit, QLabel
+
+class IPTVManager(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.initUI()
+        self.channels = []
+    
+    def initUI(self):
+        layout = QVBoxLayout()
+        
+        self.link_input = QLineEdit(self)
+        self.link_input.setPlaceholderText("Insira o link do canal")
+        layout.addWidget(self.link_input)
+        
+        self.logo_input = QLineEdit(self)
+        self.logo_input.setPlaceholderText("Insira o link do logo (opcional)")
+        layout.addWidget(self.logo_input)
+        
+        self.epg_input = QLineEdit(self)
+        self.epg_input.setPlaceholderText("Insira o link do EPG (opcional)")
+        layout.addWidget(self.epg_input)
+        
+        self.add_button = QPushButton("Adicionar Canal", self)
+        self.add_button.clicked.connect(self.add_channel)
+        layout.addWidget(self.add_button)
+        
+        self.channel_list = QTextEdit(self)
+        self.channel_list.setReadOnly(True)
+        layout.addWidget(self.channel_list)
+        
+        self.export_button = QPushButton("Exportar M3U", self)
+        self.export_button.clicked.connect(self.export_m3u)
+        layout.addWidget(self.export_button)
+        
+        self.setLayout(layout)
+        self.setWindowTitle("Gerenciador IPTV")
+        self.resize(400, 300)
+    
+    def add_channel(self):
+        link = self.link_input.text().strip()
+        logo = self.logo_input.text().strip()
+        epg = self.epg_input.text().strip()
+        
+        if link:
+            entry = f"#EXTINF:-1 logo=\"{logo}\", Canal\n{link}\n" if logo else f"#EXTINF:-1, Canal\n{link}\n"
+            self.channels.append(entry)
+            self.channel_list.append(entry)
+            self.link_input.clear()
+            self.logo_input.clear()
+            self.epg_input.clear()
+    
+    def export_m3u(self):
+        if not self.channels:
+            return
+        
+        options = QFileDialog.Options()
+        file_name, _ = QFileDialog.getSaveFileName(self, "Salvar Lista M3U", "", "Arquivos M3U (*.m3u)", options=options)
+        
+        if file_name:
+            with open(file_name, "w", encoding="utf-8") as f:
+                f.write("#EXTM3U\n")
+                f.writelines(self.channels)
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = IPTVManager()
+    window.show()
+    sys.exit(app.exec())
