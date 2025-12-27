@@ -1,3 +1,25 @@
 #EXTM3U x-tvg-
+#EXTINF:-1 tvg-language="Portuguese" tvg-logo="https://i.imgur.com/CwrWVjO.png" group-title="Brasil: variedades",GLOBO HD
+https://cdn-2.nxplay.com.br/GLOBO_SP_TK/index.m3u8
+#EXTINF:-1 tvg-id="SBTNacional.br" tvg-logo="https://i.imgur.com/srURmsi.png" group-title="Brasil: variedades",SBT HD
+https://stmv1.transmissaodigital.com/cidadeverdenovo/cidadeverdenovo/master.m3u8
+#EXTINF:-1 tvg-id="TVConquista.br" tvg-logo="https://i.imgur.com/RDekR7e.png" group-title="Brasil: variedades",RECORD HD
+http://tvconquistalrv.duckdns.org:8080/hls/tvconquistalrv.m3u8
+#EXTINF:-1 tvg-id="RedeTV.br" tvg-logo="https://images.pluto.tv/channels/6048fc47a44e540007745d2b/colorLogoPNG.png" group-title="Brasil: variedades",BAND HD
+https://5b7f3c45ab7c2.streamlock.net/arapuan/ngrp:arapuan_all/playlist.m3u8
+#EXTINF:-1 tvg-id="RedeTV.br" tvg-logo="https://images.pluto.tv/channels/6048fc47a44e540007745d2b/colorLogoPNG.png" group-title="Brasil: variedades",REDETV! HD
+https://tv02.zas.media:1936/redetvparana/redetvparana/playlist.m3u8
+#EXTINF:-1 tvg-id="RedeBrasil.br" tvg-logo="https://i.imgur.com/YTWxRSp.png" group-title="Brasil: variedades",REDE BRASIL HD
+https://5ad482a77183d.streamlock.net/operacaotbomt.com/operacaotbomt.com/playlist.m3u8
 #EXTINF:-1 tvg-id="TVCulturaNacional.br" tvg-logo="https://i.imgur.com/r18rHyH.png" group-title="Brasil: educativos e documentários",CULTURA HD
 https://5b33b873179a2.streamlock.net:1443/live/livestream/playlist.m3u8
+#EXTINF:-1 tvg-id="" tvg-logo="https://i.imgur.com/ewJjke2.jpg" group-title="Brasil: educativos e documentários",TV BRASIL HD
+https://cdn.live.br1.jmvstream.com/w/LVW-15748/LVW15748_Yed7yzLuRC/chunklist.m3u8
+#EXTINF:-1 tvg-id="CNNBrasil.br" tvg-logo="https://i.imgur.com/5AK7gLc.png" group-title="Brasil: notícias",CNN BRASIL HD
+https://video01.soultv.com.br/cnnbrasil/cnnbrasil/playlist.m3u8
+#EXTINF:-1 tvg-id="RecordNews.br" tvg-logo="https://images.pluto.tv/channels/6102e04e9ab1db0007a980a1/colorLogoPNG.png" group-title="Brasil: notícias",RECORD NEWS HD
+https://stream.ads.ottera.tv/playlist.m3u8?network_id=5431
+#EXTINF:-1 tvg-id="66296e755a402e00086a2c47" tvg-logo="https://images.pluto.tv/channels/66296e755a402e00086a2c47/colorLogoPNG.png" group-title="Brasil: variedades",CULTNE HD
+http://stitcher-ipv4.pluto.tv/v1/stitch/embed/hls/channel/66296e755a402e00086a2c47/master.m3u8?deviceType=samsung-tvplus&deviceMake=samsung&deviceModel=samsung&deviceVersion=unknown&appVersion=unknown&deviceLat=0&deviceLon=0&deviceDNT=%7BTARGETOPT%7D&deviceId=%7BPSID%7D&advertisingId=%7BPSID%7D&us_privacy=1YNY&samsung_app_domain=%7BAPP_DOMAIN%7D&samsung_app_name=%7BAPP_NAME%7D&profileLimit=&profileFloor=&embedPartner=samsung-tvplus
+#EXTINF:-1 tvg-id="demaistv.br" tvg-logo="https://pbr-str.srvsite.com/arquivos/9046/cabecalho-9046-20230725105112.png" group-title="Brasil: variedades",D+ HD
+https://stmv1.samcast.com.br/demaistv6503/demaistv6503/playlist.m3u8
